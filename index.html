@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Puzzle Master</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2173/2173478.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .start-btn {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .start-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="hero-bg min-h-screen">
+    <div class="container mx-auto px-4 py-16">
+        <div class="max-w-3xl mx-auto text-center">
+            <h1 class="text-5xl font-bold text-white mb-6 animate-bounce">Puzzle Master</h1>
+            <p class="text-xl text-white mb-8">Test your skills with this challenging drag-and-drop puzzle game</p>
+            
+            <div class="bg-white bg-opacity-90 rounded-lg p-8 mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">How to Play</h2>
+                <ol class="text-left text-gray-700 space-y-2">
+                    <li class="flex items-start">
+                        <span class="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2">1</span>
+                        Drag and drop pieces to their correct position
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2">2</span>
+                        Complete the puzzle with the fewest moves
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2">3</span>
+                        Beat your best time and challenge friends
+                    </li>
+                </ol>
+            </div>
+
+            <button onclick="window.location='game.html'" 
+                    class="start-btn px-8 py-4 bg-white text-purple-600 rounded-full text-xl font-bold">
+                <i class="fas fa-play mr-2"></i> Start Game
+            </button>
+
+            <div class="mt-12 text-white">
+                <h3 class="text-xl font-semibold mb-4">Top Scores</h3>
+                <div class="grid grid-cols-3 gap-4 max-w-md mx-auto">
+                    <div class="bg-white bg-opacity-20 p-3 rounded">
+                        <div class="font-bold">1.</div>
+                        <div>02:15</div>
+                        <div class="text-sm">32 moves</div>
+                    </div>
+                    <div class="bg-white bg-opacity-20 p-3 rounded">
+                        <div class="font-bold">2.</div>
+                        <div>02:45</div>
+                        <div class="text-sm">38 moves</div>
+                    </div>
+                    <div class="bg-white bg-opacity-20 p-3 rounded">
+                        <div class="font-bold">3.</div>
+                        <div>03:10</div>
+                        <div class="text-sm">42 moves</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
