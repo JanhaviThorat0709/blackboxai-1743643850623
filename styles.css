@@ -1,0 +1,105 @@
+/* Base styles */
+body {
+    transition: background-color 0.3s ease;
+}
+
+/* Puzzle piece animations */
+.puzzle-piece {
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.puzzle-piece:hover {
+    transform: scale(1.03) translateZ(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* Empty slot styling */
+.empty-slot {
+    transition: all 0.3s ease;
+    background-color: #f1f5f9;
+}
+
+.empty-slot:hover {
+    background-color: #e2e8f0;
+}
+
+/* Modal animations */
+#victory-modal {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#victory-modal.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Button animations */
+button {
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .puzzle-piece {
+        height: 80px;
+    }
+    
+    #puzzle-grid {
+        gap: 1px;
+    }
+}
+
+/* Keyframe animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.victory-icon {
+    animation: bounce 0.5s ease infinite;
+}
+
+/* Progress bar animation */
+.progress-bar {
+    transition: width 0.5s ease-out;
+}
+
+/* Shuffle button loading state */
+.shuffle-loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.shuffle-loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
